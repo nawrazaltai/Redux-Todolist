@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Raleway", "sans-serif";
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(230, 219, 233);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 4em;
+  background-color: #751375;
+  padding: 0em 0em 0em 0.5em;
+  align-items: center;
+}
+
+.appName {
+  color: #751375;
+  color: rgb(245, 243, 243);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.dateDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  background-color: #7c0c7c;
+  padding: 0em 0.55em;
+}
+
+.dayName {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: rgb(240, 237, 237);
+  letter-spacing: 0.09em;
+}
+
+.date {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  color: rgb(240, 237, 237);
+}
+
+.emptyTasksDiv {
+  background-color: transparent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tasksImage {
+  min-width: 70%;
+  max-width: 80%;
+  max-height: 50%;
+  height: 12em;
+}
+
+.getStartedText {
+  color: #751375;
+  font-size: 0.84rem;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+  padding-top: 0.7em;
+  margin-bottom: 5em;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+.startingPageBtnDiv {
+  display: grid;
+}
+
+.startingPageBtn {
+  background-color: #d47a25;
+  border: none;
+  padding: 0.65em 1.4em;
+  border-radius: 50px;
+  box-shadow: 2px 8px 5px #a1a09e;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  transition: ease 0.6s;
+}
+
+.startingPageBtn:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.startingPageBtn span {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.plusIcon {
+  font-size: 1rem;
+}
+
+.formDiv {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  translate: -50%;
+  width: 90%;
+  height: 70%;
+  display: block;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 0.7em 0.7em;
+  background-color: #440d44;
+}
+
+.closeCross {
+  margin-left: auto;
+  cursor: pointer;
+  color: rgb(194, 191, 191);
+}
+
+.closeCross:hover {
+  color: #e07715;
+}
+
+.formPopUp {
+  height: 17em;
+  margin-top: 1.5em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  align-items: center;
+}
+
+form button {
+  width: 50%;
+  border: none;
+  padding: 0.35em;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.submitBtn {
+  background-color: #d47a25;
+}
+
+.disabledAddBtn {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.newInputField {
+  font-size: 0.9rem;
+  padding: 0.2em 0em;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e07715;
+}
+
+.newInputField::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.todoContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.activeTasksH4 {
+  width: 100%;
+  margin: 1em 0 1em 0;
+  padding: 0 0 0 0.5em;
+}
+
+.activeTasksH4 h4 {
+  color: #751375;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.activeTasksDiv {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  gap: 1em;
+  height: 80%;
+  width: 100%;
+  background-color: rgb(230, 219, 233);
+  padding: 0 0.5em;
+}
+
+.todoDiv {
+  border-radius: 15px;
+  display: flex;
+  border: 2px solid white;
+  min-width: 70%;
+  min-width: 90%;
+  height: 4.2em;
+  padding-left: 0.5em;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 8px 5px #a1a09e;
+}
+
+.todoDiv:last-child {
+  margin-bottom: 1em;
+}
+
+.addTodoBtnDiv {
+  padding: 0.5em 0.5em;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 12%;
+  bottom: 0;
+  background-color: rgb(225, 207, 230);
+}
+
+.addTodoBtn {
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  border: none;
+  background-color: #d47a25;
+  font-size: 1.3rem;
+}
+
+.title {
+  background: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #440d44;
+  margin-right: auto;
+  padding-left: 0.3em;
+  width: 100%;
+}
+
+.clearTodosSpan {
+  padding: 0.5em 0.2em;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  color: #751375;
+  cursor: pointer;
+}
+
+.todoBtns {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em 0 0 0;
+  background: #d4c6eb;
+  height: 100%;
+  width: 3em;
+  align-items: center;
+  justify-content: space-around;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+button:hover {
+  opacity: 0.65;
+}
